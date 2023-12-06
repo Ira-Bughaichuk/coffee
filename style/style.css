@@ -43,6 +43,41 @@
   h6 {
     font-weight: inherit;
     font-size: inherit;
+}
+body {
+    height: 100%;
+    background-color: var(--body-color);
+    font-family: Inter;
+    font-size: 16px;
+    color: var(--primary-text-dark);
+    font-weight: 600;
+    line-height: 24px;
+    box-sizing: border-box;
+  }
+  body.lock{
+    overflow: hidden;
+  }
+  .container {
+   width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width:480px){
+    .container {
+      max-width: 480px;
+    }
+    @media screen and (min-width:768px){
+      .container {
+        max-width: 768px;
+        padding: 0 40px;
+      }
+    }
+  @media screen and (min-width:1440px){
+    .container {
+      max-width: 1440px;
+    }
+  }
+  
   }
   
  
