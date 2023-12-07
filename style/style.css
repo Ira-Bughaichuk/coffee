@@ -1,101 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-:root{
-    --primary-text-light: #E1D4C9;
-    --primary-text-dark:#403F3D;
-    --body-color: #E1D4C9;
-    --container-color:#665F55;
-    --backdrop-color:rgba(64, 63, 61, 0.80);
-    --border-light:#C1B6AD;
-    --border-dark:#665F55;
-    --accent-color:  #B0907A;
-   
-  }
-  
-  
-  *,
-  *::before,
-  *::after {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-  }
-  a {
-    text-decoration: none;
-  }
-  ul,
-  ol,
-  li {
-    list-style: none;
-  }
-  img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: inherit;
-    font-size: inherit;
+:root {
+  --primary-text-light-colo: #e1d4c9;
+  --primary-text-dark-color: #403f3d;
+  --body-color: #e1d4c9;
+  --container-color: #665f55;
+  --backdrop-color: rgba(64, 63, 61, 0.8);
+  --border-light-color: #c1b6ad;
+  --border-dark-color: #665f55;
+  --accent-color: #b0907a;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
 }
 html,
 body {
-    height: 100%;
-    background-color: var(--body-color);
-    font-family: Inter;
-    font-size: 16px;
-    color: var(--primary-text-dark);
-    font-weight: 600;
-    line-height: 24px;
-    box-sizing: border-box;
-  }
-  body.lock{
-    overflow: hidden;
-  }
-  .wrapper{
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  .page{ 
-    flex: 1 1 auto;
-  }
-  .header{
-    padding: 10px 0;
-    background-color: aqua;
-  }
-  .footer{
-    padding: 10px 0;
-    background-color: aqua;
-  }
+  height: 100%;
+  background-color: var(--body-color-color);
+  font-family: Inter;
+  font-size: 16px;
+  color: var(--primary-text-dark-color);
+  font-weight: 600;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+body.lock {
+  overflow: hidden;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  flex: 1 1 auto;
+}
+.header {
+  padding: 20px 0;
+}
+.footer {
+  padding: 100px 0;
+  background-color: var(--container-color);
+}
+.container {
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
   .container {
-   width: 100%;
-    padding: 0 16px;
-    margin: 0 auto;
+    max-width: 480px;
   }
-  @media screen and (min-width:480px){
+  @media screen and (min-width: 768px) {
     .container {
-      max-width: 480px;
+      max-width: 768px;
+      padding: 0 40px;
     }
-    @media screen and (min-width:768px){
-      .container {
-        max-width: 768px;
-        padding: 0 40px;
-      }
-    }
-  @media screen and (min-width:1440px){
+  }
+  @media screen and (min-width: 1440px) {
     .container {
       max-width: 1440px;
     }
   }
-  
-  }
-  
- 
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 100px;
+  height: 60px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__navigation {
+}
+.header__list {
+  display: flex;
+  column-gap: 40px;
+  flex-direction: row;
+  align-items: center;
+}
+.header__list li{
+  cursor:pointer;
+  position: relative;
+}
+.header__link {
+  color: var(--primary-text-dark);
+  line-height: 150%;
+}
+.header__menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.header__menu span {
+  color: var(--primary-text-dark-color);
+}
+.header__list li::before,
+.header__menu::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0; 
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-text-dark-color);
+  transition: width 0.3s, left 0.3s ease-out;
+  transform-origin: right; 
+}
+.header__list li:hover::before,
+.header__list li:focus::before,
+.header__menu:hover::before,
+.header__menu:focus::before {
+  width: 100%;
+  left: 0;
+
+}
