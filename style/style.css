@@ -96,12 +96,15 @@ body.lock {
   }
 }
 
+/* --------header-------- */
 .header__body {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 .header__logo {
+  display: block;
   width: 100px;
   height: 60px;
 }
@@ -126,6 +129,7 @@ body.lock {
 }
 .header__menu {
   position: relative;
+  max-width: 72px;
   display: flex;
   flex-direction: row;
   column-gap: 8px;
@@ -156,3 +160,5 @@ body.lock {
   left: 0;
 
 }
+
+
