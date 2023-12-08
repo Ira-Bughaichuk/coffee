@@ -131,7 +131,17 @@ body.lock {
   }
 }
 /* =====title=================== */
-
+.wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page{
+  flex:1 1 auto;
+}
+.footer{
+  padding: 10px 0;
+}
 /* --------header-------- */
 .header {
   padding: 20px 0;
