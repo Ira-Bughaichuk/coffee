@@ -279,27 +279,28 @@ body.lock {
 
 /* =======contact=========== */
 .contact-section {
+  margin-top: 40px;
+ margin-bottom: 40px;
+}
+
+.contact{
   padding: 60px 16px;
   background-color: var(--container-color);
-}
-@media screen and (min-width: 768px) {
-  .contact-section {
-    padding: 100px 60px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .contact-section {
-    padding: 100px 100px;
-  }
-}
-.contact{
+  border-radius: 40px;
+
   display: flex;
   flex-direction: column;
   row-gap: 40px;
   
 }
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 100px 60px;
+  }
+}
 @media screen and (min-width: 1440px) {
   .contact{
+    padding: 100px 100px;
     flex-direction: row;
     column-gap: 100px;
     align-items: center;
