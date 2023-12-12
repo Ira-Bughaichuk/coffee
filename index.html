@@ -35,7 +35,11 @@
                     <div class="hero">
                         <h1 class="hero__title"><span>Enjoy</span> premium coffee at our charming cafe</h1>
                         <p class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                        <button class="button-primary">Menu</button>
+                        <button class="button-primary">Menu
+                            <svg class="icon button-primary__icon" width="20" height="20">
+                                <use xlink:href="./assets/icons/sprite.svg#icon-coffee-cup" width="20" height="20"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -57,16 +61,20 @@
                             <h2 class="title"><span>Download</span> our apps to start ordering</h2>
                             <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
                             <ul class="button__list">
-                                <li><button type="button" class="button-secondary">
-                                        <img src="" alt="App Store">
+                                <li><button type="button" class="button-secondary" aria-label="App Store">
+                                        <svg class="icon button-secondary__icon" width="36" height="36">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-app-store"></use>
+                                        </svg>
                                         <p class="button-secondary__text">
                                             <span class="button-secondary__text--thin">Available on the</span>
                                             <span>App Store</span>
                                         </p>
                                     </button>
                                 </li>
-                                <li><button type="button" class="button-secondary">
-                                        <img src="" alt="Google Play">
+                                <li><button type="button" class="button-secondary" aria-label="Google Play">
+                                    <svg class="icon button-secondary__icon" width="36" height="36">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-google-play"></use>
+                                    </svg>
                                         <p class="button-secondary__text">
                                             <span class="button-secondary__text--thin">Available on the</span>
                                             <span>Google Play</span>
@@ -87,21 +95,45 @@
                         <div class="contact__left">
                             <h2 class="title">Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
                             <ul class="socials">
-                                <li><a href="https://twitter.com/" class="socials__link" aria-label="Twitter" rel="noreferrer noopener" target="_blank"><img src="./assets/icons/twitter.svg" alt="Twitter" width="24" height="24"></a></li>
-                                <li><a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram" rel="noreferrer noopener" target="_blank"><img src="./assets/icons/instagram.svg" alt="Instagram" width="24" height="24"></a></li>
-                                <li><a href="https://uk-ua.facebook.com/" class="socials__link" aria-label="Facebook" rel="noreferrer noopener" target="_blank"><img src="./assets/icons/facebook.svg" alt="Facebook" width="24" height="24"></a></li>
+                                <li><a href="https://twitter.com/" class="socials__link" aria-label="Twitter" rel="noreferrer noopener" target="_blank">
+                                    <svg class="icon socials__icon" width="24" height="24">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-twitter"></use>
+                                    </svg></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram" rel="noreferrer noopener" target="_blank">
+                                    <svg class="icon socials__icon" width="24" height="24">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-instagram"></use>
+                                    </svg></a>
+                                </li>
+                                <li><a href="https://uk-ua.facebook.com/" class="socials__link" aria-label="Facebook" rel="noreferrer noopener" target="_blank">
+                                    <svg class="icon socials__icon" width="24" height="24">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-facebook"></use>
+                                    </svg></a>
+                                </li>
                             </ul>
                         </div>
                         <div class="contact__info">
                             <h3 class="info__text">Contact us</h3>
                             <address>
                                 <ul class="address__list">
-                                    <li><a  class='address__item' href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
-                                        <img src="./assets/icons/pin-alt.svg" alt="Map" width="20" height="20"> 8558 Green Rd.,  LA</a></li>
-                                    <li><a class='address__item'  href="tel:+16035550123">
-                                        <img src="./assets/icons/phone.svg" alt="Phone" width="20" height="20"> +1 (603) 555-0123</a></li>
-                                    <li><p class='address__item address__item--watch' >
-                                        <img src="./assets/icons/clock.svg" alt="Watch" width="20" height="20"> Mon-Sat: <time datetime="09:00">9:00 AM</time> – <time datetime="23:00">11:00 PM</time></p></li>
+                                    <li><a  class='address__item' href="https://www.google.com/maps"  aria-label="Map" target="_blank" rel="noopener noreferrer">
+                                        <svg class="icon address__icon" width="20" height="20">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-pin-alt"></use>
+                                        </svg>
+                                        8558 Green Rd.,  LA</a>
+                                    </li>
+                                    <li><a class='address__item'  href="tel:+16035550123" aria-label="Phone">
+                                        <svg class="icon address__icon" width="20" height="20">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-phone"></use>
+                                        </svg>
+                                         +1 (603) 555-0123</a>
+                                    </li>
+                                    <li><p class='address__item address__item--watch' aria-label="Watch">
+                                        <svg class="icon address__icon" width="20" height="20">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-clock"></use>
+                                        </svg>
+                                         Mon-Sat: <time datetime="09:00">9:00 AM</time> – <time datetime="23:00">11:00 PM</time></p>
+                                    </li>
                                 </ul>
                             </address>
                         </div>
