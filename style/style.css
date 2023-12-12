@@ -89,7 +89,6 @@ body.lock {
 }
 /* =======icon======= */
 
-
 /* =====button-primary=================== */
 .button-primary {
   display: flex;
@@ -120,10 +119,10 @@ body.lock {
 .button-primary:hover .button-primary__icon {
   stroke: currentColor;
 } */
-.button-primary__icon{
+.button-primary__icon {
   stroke: transparent;
   stroke-width: 1px;
-  fill:transparent;
+  fill: transparent;
 }
 .button-primary:focus .button-primary__icon,
 .button-primary:hover .button-primary__icon {
@@ -174,7 +173,7 @@ body.lock {
   line-height: 14px;
 }
 .button-secondary:hover,
-.button-secondary:focus{
+.button-secondary:focus {
   background-color: var(--container-color);
   color: var(--primary-text-light-color);
 }
@@ -183,9 +182,6 @@ body.lock {
   fill: var(--primary-text-light-color);
 }
 /* =======button-secondary======= */
-
-
-
 
 /* =====title=================== */
 .title {
@@ -362,6 +358,68 @@ body.lock {
 
 /* =======hero=========== */
 
+/*==========about=========*/
+.about-section {
+  padding-bottom: 100px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 590px);
+
+  gap: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, minmax(430px, 1fr)); */
+    /* grid-template-rows: repeat(auto-fit, min-max(430px,1fr)); */
+  }
+}
+.gallery__item {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery__item--small {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .gallery__item--small {
+    display: block;
+  height: 430px;
+    /* height: 100%; */
+  /* height: 726px; */
+  /* width: 660px; */
+  }
+}
+    /* height: 590px; */
+  /* height: 430px; */
+
+
+/* .gallery__item:nth-child(4) {
+  grid-row: 2 / span 3; /* Розташуйте четверту картинку в першій колонці і розтягніть на дві колонки */
+/* margin-top: 40px; Додайте відступ сверху, щоб вирівняти з другою картинкою */
+/*} */
+.gallery__item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: scale(1);
+  transition: scale 2s ease-in; 
+}
+.gallery__item:hover img{
+  transform: scale(0.9);
+}
+/*==========about=========*/
+
 /* =========mobile=========== */
 .mobile-section {
   padding-bottom: 100px;
@@ -386,14 +444,14 @@ body.lock {
 .mobile__left {
   flex: 1;
 }
-.button__list{
+.button__list {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .button__list{
+  .button__list {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
@@ -481,11 +539,11 @@ body.lock {
   background-color: transparent;
   color: var(--primary-text-light-color);
 }
-.socials__icon{
+.socials__icon {
   stroke: currentColor;
   stroke-width: 1px;
   transition: stroke 0.5s ease-out;
-  fill:transparent;
+  fill: transparent;
 }
 .socials__link:hover,
 .socials__link:focus {
@@ -493,8 +551,8 @@ body.lock {
   border-color: var(--body-color);
 }
 .socials__link:hover .socials__icon,
-.socials__link:focus .socials__icon{
-  stroke:var(--primary-text-dark-color);
+.socials__link:focus .socials__icon {
+  stroke: var(--primary-text-dark-color);
 }
 .info__text {
   color: var(--primary-text-light-color);
@@ -535,10 +593,10 @@ body.lock {
 .address__item--watch {
   width: 273px;
 }
-.address__icon{
+.address__icon {
   stroke: currentColor;
   stroke-width: 1px;
-  fill:transparent;
+  fill: transparent;
 }
 
 /* =======contact=========== */
