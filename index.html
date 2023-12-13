@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/modern-normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/style.css">
     <title>Coffee-House</title>
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <!-- <header class="header">
             <div class="container">
                 <div class="header__body">
                     <a href="./" class="header__logo"><img src="./assets/icons/logo.svg" alt="Resourse coffee house"></a>
@@ -28,7 +29,7 @@
                     </a>
                 </div>
             </div>
-        </header>
+        </header> -->
         <main class="page">
             <section class="hero-section">
                 <div class="container">
@@ -43,12 +44,12 @@
                     </div>
                 </div>
             </section>
-            <section id="/favorite-coffee" class="favorite-section">
+            <section id="/favorite-coffee" class="favorite-section" data-slider="slider">
                 <div class="container">
                     <h2 class="title title--center">Choose your <span>favorite</span> coffee</h2>
-                    <div class="list">
-                        <div class="list__item">
-                            <div class="cart">
+                    <div class="swiper favorite-section__swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide cart">
                                 <div class="cart__image">
                                     <img src="./assets/images/coffee-slider-1.png" alt="S’mores Frappuccino">
                                 </div>
@@ -57,7 +58,38 @@
                                     <p class="cart__description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                                     <p class="cart__price">$5.50</p>
                                 </div>
-                            </div>
+                            </li>
+                            <li class="swiper-slide cart">
+                                <div class="cart__image">
+                                    <img src="./assets/images/coffee-2.png" alt="Caramel Macchiato">
+                                </div>
+                                <div class="cart__info">
+                                    <p class="cart__title">Caramel Macchiato</p>
+                                    <p class="cart__description">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                    <p class="cart__price">$5.00</p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide  cart">
+                                <div class="cart__image">
+                                    <img src="./assets/images/coffee-slider-3.png" alt="Ice coffee">
+                                </div>
+                                <div class="cart__info">
+                                    <p class="cart__title">Ice coffee</p>
+                                    <p class="cart__description">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                    <p class="cart__price">$4.50</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="swiper-pagination__dots"></ul>
+                        <div class="button-prev">
+                            <svg class="button-prev__icon" width="24" height="24">
+                                <use xlink:href="./assets/icons/sprite.svg#icon-arrow-left"></use>
+                            </svg>
+                        </div>
+                        <div class="button-next">
+                            <svg class="button-prev__icon" width="24" height="24">
+                                <use xlink:href="./assets/icons/sprite.svg#icon-arrow-right"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -170,5 +202,7 @@
         </main>
         <footer class="footer"></footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
