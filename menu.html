@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/modern-normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Menu</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__body">
+                    <div class="header__mobile-wrap">
+                        <a href="./" class="header__logo"><img src="./assets/icons/logo.svg" alt="Resourse coffee house"></a>
+                        <button class="burger-menu" type="button"></button>
+                    </div>
+                    <nav class="header__navigation">
+                        <ul class="header__list">
+                                <li><a data-goto="/favorite-coffee" class="header__link">Favorite coffee</a></li>
+                                <li><a data-goto="/about" class="header__link">About</a></li>
+                                <li><a data-goto="/mobile-app" class="header__link">Mobile app</a></li>
+                                <li><a data-goto="/contact-us" class="header__link">Contact us</a></li>
+                        </ul>
+                        <a href="./menu" class="header__menu">
+                                <span>Menu</span>
+                                <img src="./assets/icons/header-coffee-cup.svg" alt="Coffee cup" width="20" height="20">
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <section>
+                <div class="container">
+                <h1 class="title title__menu">Behind each of our cups hides an <span>amazing surprise</span></h1>
+                <ul class="btns-list">
+                    <li class="btns-list__item"><button class="btns-list__button" type="button">
+                        <span class="btns-list__img btns-list__img--coffee"></span>Coffee</button>
+                    </li>
+                    <li class="btns-list__item"><button class="btns-list__button" type="button">
+                        <span class="btns-list__img btns-list__img--tea"></span>Tea</button>
+                    </li>
+                    <li class="btns-list__item"><button class="btns-list__button" type="button">
+                        <span class="btns-list__img btns-list__img--dessert"></span>Dessert</button>
+                    </li>
+                </ul>
+                <ul class="menu-card">
+                    <li class="menu-card__item">
+                        <div class="menu-card__image"><img  src="./assets/images/tea/tea-1.jpg" alt=""></div>
+                        <div class="menu-card__description">
+                            <div class="menu-card__top">
+                                <p class="menu-card__title">Moroccan</p>
+                                <p class="menu-card__text">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+                            </div>
+                            <p class="menu-card__price">$4.50</p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </section>
+            <section id="/contact-us" class="contact-section">
+                <div class="container">
+                    <div class="contact">
+                        <div class="contact__left">
+                            <h2 class="title">Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
+                            <ul class="socials">
+                                <li><a href="https://twitter.com/" class="socials__link" aria-label="Twitter" rel="noreferrer noopener" target="_blank">
+                                    <svg class="icon socials__icon" width="24" height="24">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-twitter"></use>
+                                    </svg></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram" rel="noreferrer noopener" target="_blank">
+                                    <svg class="icon socials__icon" width="24" height="24">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-instagram"></use>
+                                    </svg></a>
+                                </li>
+                                <li><a href="https://uk-ua.facebook.com/" class="socials__link" aria-label="Facebook" rel="noreferrer noopener" target="_blank">
+                                    <svg class="icon socials__icon" width="24" height="24">
+                                        <use xlink:href="./assets/icons/sprite.svg#icon-facebook"></use>
+                                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact__info">
+                            <h3 class="info__text">Contact us</h3>
+                            <address>
+                                <ul class="address__list">
+                                    <li><a  class='address__item' href="https://www.google.com/maps"  aria-label="Map" target="_blank" rel="noopener noreferrer">
+                                        <svg class="icon address__icon" width="20" height="20">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-pin-alt"></use>
+                                        </svg>
+                                        8558 Green Rd.,  LA</a>
+                                    </li>
+                                    <li><a class='address__item'  href="tel:+16035550123" aria-label="Phone">
+                                        <svg class="icon address__icon" width="20" height="20">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-phone"></use>
+                                        </svg>
+                                         +1 (603) 555-0123</a>
+                                    </li>
+                                    <li><p class='address__item address__item--watch' aria-label="Watch">
+                                        <svg class="icon address__icon" width="20" height="20">
+                                            <use xlink:href="./assets/icons/sprite.svg#icon-clock"></use>
+                                        </svg>
+                                         Mon-Sat: <time datetime="09:00">9:00 AM</time> – <time datetime="23:00">11:00 PM</time></p>
+                                    </li>
+                                </ul>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src='./js/mobile-menu.js'></script>
+</body>
+</html>
