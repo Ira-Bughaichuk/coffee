@@ -11,25 +11,28 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- <header class="header">
+        <header class="header">
             <div class="container">
                 <div class="header__body">
-                    <a href="./" class="header__logo"><img src="./assets/icons/logo.svg" alt="Resourse coffee house"></a>
+                    <div class="header__mobile-wrap">
+                        <a href="./" class="header__logo"><img src="./assets/icons/logo.svg" alt="Resourse coffee house"></a>
+                        <button class="burger-menu" type="button"></button>
+                    </div>
                     <nav class="header__navigation">
                         <ul class="header__list">
-                            <li><a href="/favorite-coffee" class="header__link">Favorite coffee</a></li>
-                            <li><a href="/about" class="header__link">About</a></li>
-                            <li><a href="/mobile-app" class="header__link">Mobile app</a></li>
-                            <li><a href="/contact-us" class="header__link">Contact us</a></li>
+                                <li><a data-goto="/favorite-coffee" class="header__link">Favorite coffee</a></li>
+                                <li><a data-goto="/about" class="header__link">About</a></li>
+                                <li><a data-goto="/mobile-app" class="header__link">Mobile app</a></li>
+                                <li><a data-goto="/contact-us" class="header__link">Contact us</a></li>
                         </ul>
+                        <a href="./menu" class="header__menu">
+                                <span>Menu</span>
+                                <img src="./assets/icons/header-coffee-cup.svg" alt="Coffee cup" width="20" height="20">
+                        </a>
                     </nav>
-                    <a href="./menu" class="header__menu">
-                        <span>Menu</span>
-                        <img src="./assets/icons/header-coffee-cup.svg" alt="Coffee cup" width="20" height="20">
-                    </a>
                 </div>
             </div>
-        </header> -->
+        </header>
         <main class="page">
             <section>
                 <div class="container">
@@ -202,5 +205,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src='./js/nav-menu.js'></script>
 </body>
 </html>
