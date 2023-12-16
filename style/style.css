@@ -92,6 +92,7 @@ body.lock {
 
 /* =====button-primary=================== */
 .button-primary {
+  position: relative;
   display: flex;
   flex-direction: row;
   column-gap: 8px;
@@ -108,28 +109,9 @@ body.lock {
   outline: none;
   cursor: pointer;
   padding: 20px 78px;
-  transition: stroke 0.5s ease-out;
+  transition: stroke 0.9s ease-out;
 }
-/* .button-primary__icon {
-  stroke: transparent;
-  stroke-width: 1px;
-  fill: currentColor; 
-}
-
-.button-primary:focus .button-primary__icon,
-.button-primary:hover .button-primary__icon {
-  stroke: currentColor;
-} */
-.button-primary__icon {
-  stroke: transparent;
-  stroke-width: 1px;
-  fill: transparent;
-}
-.button-primary:focus .button-primary__icon,
-.button-primary:hover .button-primary__icon {
-  stroke: var(--primary-text-dark-color);
-}
-/* .button-primary::before {
+.button-primary::before {
   position: absolute;
   content: "";
   display: block;
@@ -138,12 +120,12 @@ body.lock {
   transform: translateX(-70%);
   width: 20px;
   height: 20px;
-  transition: background-image 0.5s ease-out;
+  transition: background-image 0.9s ease-out;
 }
 .button-primary:focus::before,
 .button-primary:hover::before {
   background-image: url("../assets/icons/btn-coffee-cup.svg");
-} */
+}
 /* =====button-primary=================== */
 
 /* =======button-secondary======= */
@@ -1036,8 +1018,7 @@ body.lock {
 /*========choose-btn=========*/
 
 /*========modal=========*/
-.is-hidden {
-}
+
 .backdrop {
   position: fixed;
   top: 0;
