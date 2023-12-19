@@ -40,18 +40,18 @@
                 <div class="container">
                 <h1 class="title title__menu">Behind each of our cups hides an <span>amazing surprise</span></h1>
                 <ul class="btns-list">
-                    <li class="btns-list__item"><button class="btns-list__button" type="button">
+                    <li class="btns-list__item"><button onClick="filterProduct('coffee')" data-button-category class="btns-list__button" type="button">
                         <span class="btns-list__img btns-list__img--coffee"></span>Coffee</button>
                     </li>
-                    <li class="btns-list__item"><button class="btns-list__button" type="button">
+                    <li class="btns-list__item"><button onClick="filterProduct('tea')" data-button-category class="btns-list__button" type="button">
                         <span class="btns-list__img btns-list__img--tea"></span>Tea</button>
                     </li>
-                    <li class="btns-list__item"><button class="btns-list__button" type="button">
+                    <li class="btns-list__item"><button onClick="filterProduct('dessert')" data-button-category class="btns-list__button" type="button">
                         <span class="btns-list__img btns-list__img--dessert"></span>Dessert</button>
                     </li>
                 </ul>
-                <ul class="menu-card">
-                    <li class="menu-card__item" data-modal-open>
+                <ul class="menu-card" data-product-list>
+                    <!-- <li class="menu-card__item" data-modal-open>
                         <div class="menu-card__image"><img  src="./assets/images/tea/tea-1.jpg" alt=""></div>
                         <div class="menu-card__description">
                             <div class="menu-card__top">
@@ -60,7 +60,7 @@
                             </div>
                             <p class="menu-card__price">$4.50</p>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
                 </div>
             </section>
@@ -158,6 +158,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src='./js/mobile-menu.js'></script>
+    <script src="./js/menu.js"></script>
     <script src='./js/modal.js'></script>
 </body>
 </html>

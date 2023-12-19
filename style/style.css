@@ -934,11 +934,13 @@ body.lock {
   transition: all 0.7s ease-out;
   cursor: pointer;
 }
+.btns-list__button.active,
 .btns-list__button:hover,
 .btns-list__button:focus {
   color: var(--primary-text-light-color);
   background-color: var(--container-color);
 }
+
 .btns-list__img {
   display: block;
   width: 30px;
