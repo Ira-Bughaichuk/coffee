@@ -979,6 +979,17 @@ body.lock {
   border-radius: 40px;
   border: 1px solid var(--border-light-color);
   padding-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu-card__button{
+  background-color: transparent;
+  width: 310px;
+  height: 506px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .menu-card__image {
   width: 310px;
@@ -998,13 +1009,15 @@ body.lock {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /* justify-content: space-between; */
-  row-gap: 12px;
+  text-align: left;
+  justify-content: space-between;
+  height: 100%;
 }
 .menu-card__top {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+
 }
 .menu-card__price,
 .menu-card__title {
@@ -1109,7 +1122,13 @@ body.lock {
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
     width: 688px;
-    height: 672px;
+    /* height: 672px; */
+  }
+}
+@media screen and (min-width: 1440px) {
+  .backdrop__modal {
+    width: 800px;
+    /* height: 504px; */
   }
 }
 .modal-content {
