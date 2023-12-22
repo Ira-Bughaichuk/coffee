@@ -124,25 +124,34 @@
               <div class="modal-content__image">
                 <img class="image-modal">
               </div>
+              <form action="">
               <div class="modal-content__description">
                 <p class="modal-content__title"></p>
                 <p class="modal-content__supTitle"></p>
-                <div class="modal-content__choose choose">
-                    <p class="choose__title">Size</p>
+                <fieldset class="modal-content__choose choose">
+                    <legend class="choose__title">Size</legend>
                     <ul class="choose__list">
-                        <li><button class="choose-btn" data-size="S" ><span>S</span>200 ml</button></li>
+                        <li><label for="small" class="choose-label">
+                            <span>S</span>200 ml
+                            <input type="radio" name="sizes" id="small" value="s" checked>
+                        </label></li>
+                        <!-- <li><button class="choose-btn" data-size="S" ><span>S</span>200 ml</button></li>
                         <li><button class="choose-btn" data-size="M" ><span>M</span>300 ml</button></li>
-                        <li><button class="choose-btn" data-size="L" ><span>L</span>400 ml</button></li>
+                        <li><button class="choose-btn" data-size="L" ><span>L</span>400 ml</button></li> -->
                     </ul>
-                </div>
-                <div class="modal-content__choose choose">
-                    <p class="choose__title">Additives</p>
+                </fieldset>
+                <fieldset class="modal-content__choose choose">
+                    <legend class="choose__title">Additives</legend>
                     <ul class="choose__list">
-                        <li><button class="choose-btn" data-additives-price="0.50"><span>1</span>Sugar</button></li>
+                        <li><label for="one" class="choose-label">
+                            <span>1</span>Sugar
+                            <input type="checkbox" name="additives-price" id="one" value="one">
+                        </label></li>
+                        <!-- <li><button class="choose-btn" data-additives-price="0.50"><span>1</span>Sugar</button></li>
                         <li><button class="choose-btn" data-additives-price="0.50"><span>2</span>Lemon</button></li>
-                        <li><button class="choose-btn" data-additives-price="0.50"><span>3</span>Syrup</button></li>
+                        <li><button class="choose-btn" data-additives-price="0.50"><span>3</span>Syrup</button></li> -->
                     </ul>
-                </div>
+                </fieldset>
                 <div class="modal-content__total"><p>Total:</p><p class="modal-content__total--left"></p></div>
                 <div class="modal-content__info">
                     <svg class="icon info__icon" width="16" height="16">
@@ -150,8 +159,9 @@
                     </svg>
                     <p>The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
                 </div>
-                <button class="modal-content__btn">Close</button>
+                <button class="modal-content__btn" type="submit">Close</button>
               </div>
+            </form>
             </div>
         </div>
     </div>

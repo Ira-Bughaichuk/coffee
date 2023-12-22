@@ -980,7 +980,7 @@ body.lock {
   border: 1px solid var(--border-light-color);
   padding-bottom: 20px;
   overflow: hidden;
-  cursor: pointer;
+  
 }
 .menu-card__button{
   background-color: transparent;
@@ -990,20 +990,27 @@ body.lock {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .menu-card__image {
-  width: 310px;
+  max-width: 310px;
+  width: 100%;
   height: 310px;
   border-radius: 40px;
   border: none;
 }
 .menu-card__image img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
   border-radius: 40px;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+.menu-card__image:hover img{
+  transform: scale(1.1);
 }
 .menu-card__description {
   display: flex;
@@ -1038,7 +1045,6 @@ body.lock {
 /*========choose-btn=========*/
 .choose-btn {
   padding: 8px 16px 8px 8px;
-  /* max-width: 116px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1080,6 +1086,54 @@ body.lock {
 
 /*========choose-btn=========*/
 
+
+/*=======choose-label=======*/
+input[type="checkbox"],
+input[type="radio"]{
+  display: none;
+}
+.choose-label{
+  padding: 8px 16px 8px 8px;
+  /* max-width: 116px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+  background-color: transparent;
+  color: var(--primary-text-dark-color);
+  border-radius: 100px;
+  border: 1px solid var(--border-light-color);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.7s ease-out, border-color 0.7s ease-out, color 0.7s ease-out;
+}
+.choose-label span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--border-light-color);
+  transition: background-color 0.7s ease-out, color 0.7s ease-out;
+}
+input[type="checkbox"]:checked  +  .choose-label,
+input[type="radio"]:checked +  .choose-label,
+.choose-label:hover,
+.choose-label:focus{
+  background-color: var(--container-color);
+  border-color: var(--container-color);
+  color: var(--primary-text-light-color);
+}
+input[type="checkbox"]:checked +  .choose-label  span,
+input[type="radio"]:checked +  .choose-label  span,
+.choose-label:hover span,
+.choose-label:focus span{
+  background-color: var(--primary-text-light-color);
+  color: var(--primary-text-dark-color);
+}
+/*=======choose-label=======*/
 /*========modal=========*/
 
 .backdrop {
@@ -1184,12 +1238,13 @@ body.lock {
   margin-bottom: 20px;
 }
 .choose {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
+  padding: 0;
+  border: none;
 }
 .choose__title {
   font-weight: 400;
+  display: block;
+  margin-bottom: 8px;
 }
 .choose__list {
   display: flex;
@@ -1237,6 +1292,13 @@ body.lock {
   align-items: center;
   overflow: hidden;
   background-color: transparent;
+  transition: background-color 0.7s ease-out, color 0.7s ease-out;
+  cursor: pointer;
+}
+.modal-content__btn:hover,
+.modal-content__btn:focus{
+  background-color: var(--container-color);
+  color: var(--primary-text-light-color);
 }
 .info__icon {
   fill: transparent;
