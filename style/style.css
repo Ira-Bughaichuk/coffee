@@ -1049,7 +1049,7 @@ body.lock {
   border: 1px solid var(--border-light-color);
   overflow: hidden;
   cursor: pointer;
-  transition: background-color 0.7s ease-out, border-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out, border-color 0.7s ease-out, color 0.7s ease-out;
 }
 
 .choose-btn span {
@@ -1061,7 +1061,7 @@ body.lock {
   border-radius: 100px;
   border: none;
   background-color: var(--border-light-color);
-  transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out, color 0.7s ease-out;
 }
 
 .choose-btn:hover,
@@ -1069,12 +1069,15 @@ body.lock {
 .choose-btn.active {
   background-color: var(--container-color);
   border-color: var(--container-color);
+  color: var(--primary-text-light-color);
 }
 .choose-btn:hover span,
 .choose-btn:focus span,
 .choose-btn.active span {
   background-color: var(--primary-text-light-color);
+  color: var(--primary-text-dark-color);
 }
+
 /*========choose-btn=========*/
 
 /*========modal=========*/
