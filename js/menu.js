@@ -728,16 +728,17 @@ function activeButton(value){
 }
 // create marcup product
 function createMarcup(cardList){
-    const markup = cardList.map(({ image, tittle, description, price, sizes, additives }) => `
+    const markup = cardList.map((item) => `
     <li class="menu-card__item">
-    <button class="menu-card__button"  onClick="openModal({img:'${image}', title:'${tittle}', description:'${description}', price:'${price}', sizes:'${sizes}', additives:'${additives}'})" type="button">
-                    <div class="menu-card__image"><img  src="${image}" alt=${tittle}></div>
+    <button class="menu-card__button" data-card-data='${JSON.stringify(item)}'
+                      onClick="openModal(this)" type="button">
+                    <div class="menu-card__image"><img  src="${item.image}" alt=${item.tittle}></div>
                     <div class="menu-card__description">
                         <div class="menu-card__top">
-                            <p class="menu-card__title">${tittle}</p>
-                            <p class="menu-card__text">${description}</p>
+                            <p class="menu-card__title">${item.tittle}</p>
+                            <p class="menu-card__text">${item.description}</p>
                         </div>
-                        <div class="menu-card__price">${price}</div>
+                        <div class="menu-card__price">${item.price}</div>
                     </div>
       </button>            
     </li>
@@ -768,9 +769,10 @@ modal.querySelector('[modal-window]').addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
-function openModal(cardData) {
+function openModal(button) {
   modal.classList.remove("is-hidden");
   document.body.classList.add("lock");
+  const cardData = JSON.parse(button.getAttribute('data-card-data'));
   contentForModel(cardData);
 }
 
@@ -782,22 +784,60 @@ function closeModal(){
 
 //modal with current data of product
 function contentForModel(cardData){
-  const {img, title, description, price, sizes, additives} = cardData;
+const { image, tittle, description, price, sizes, additives } = cardData;
 const imageProduct = document.querySelector('.image-modal');
 const titleProduct = document.querySelector('.modal-content__title');
 const descriptionProduct = document.querySelector('.modal-content__supTitle');
 const priceProduct = document.querySelector(".modal-content__total--left");
+const sizeList = document.querySelector('[data-size-list]');
+const additivesList = document.querySelector('[data-additives-list]');
 
- imageProduct.src = img;
- imageProduct.alt = title;
-titleProduct.textContent = title;
+
+imageProduct.src = image;
+imageProduct.alt = tittle;
+titleProduct.textContent = tittle;
 descriptionProduct.textContent = description;
 priceProduct.textContent = price;
-
-
+additivesList.innerHTML = createMarcupAdditives(additives);
+sizeList.innerHTML = createMarcupSizes(sizes)
 
 //console.log('totalPrice',totalPrice);
   // const data = cardData
   //   console.log(data);
 }
 
+function createMarcupAdditives(additives) {
+  const markup = additives.map(({ name, 'add-price':addPrice }, indx) => `
+    <li>
+      <label for="${name}" class="choose-label">
+        <span>${indx+1}</span>${name}
+        <input type="checkbox" name="size" id="${name}" value="${addPrice}">
+      </label>
+    </li>
+  `)
+    .join("");
+  return markup;
+}
+function createMarcupSizes(sizes){
+  const card =  Object.entries(sizes);
+  const markup = card.map((item) => `
+    <li>
+      <label for="${item[1].size}" class="choose-label">
+        <span>${item[0].toUpperCase()}</span>${item[1].size}
+        <input type="radio" name="${item[0]}" id="${item[1].size}" value="${item[1].size}">
+      </label>
+    </li>
+  `)
+    .join("");
+  return markup;
+}
+
+//work with form of modal
+const dataForm = document.querySelector("[data-form]");
+dataForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(e){
+  e.preventDefault();
+  // const form = e.target.name;
+  // console.log('form', form);
+}

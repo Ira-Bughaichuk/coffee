@@ -1277,6 +1277,16 @@ input[type="radio"]:checked +  .choose-label  span,
   font-size: 10px;
   line-height: 14px;
 }
+@media screen and (min-width: 768px) {
+  .modal-content__info p {
+    width: 302px; 
+  }
+}
+@media screen and (min-width: 1440px) {
+  .modal-content__info p {
+    width: 414px;
+  }
+}
 .modal-content__info::before {
   position: absolute;
   content: "";

@@ -50,18 +50,7 @@
                         <span class="btns-list__img btns-list__img--dessert"></span>Dessert</button>
                     </li>
                 </ul>
-                <ul class="menu-card" data-product-list>
-                    <!-- <li class="menu-card__item">
-                        <div class="menu-card__image"><img  src="./assets/images/tea/tea-1.jpg" alt=""></div>
-                        <div class="menu-card__description">
-                            <div class="menu-card__top">
-                                <p class="menu-card__title">Moroccan</p>
-                                <p class="menu-card__text">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
-                            </div>
-                            <p class="menu-card__price">$4.50</p>
-                        </div>
-                    </li> -->
-                </ul>
+                <ul class="menu-card" data-product-list></ul>
                 </div>
             </section>
             <section id="/contact-us" class="contact-section">
@@ -124,33 +113,17 @@
               <div class="modal-content__image">
                 <img class="image-modal">
               </div>
-              <form action="">
+              <form action="#" data-form>
               <div class="modal-content__description">
                 <p class="modal-content__title"></p>
                 <p class="modal-content__supTitle"></p>
                 <fieldset class="modal-content__choose choose">
                     <legend class="choose__title">Size</legend>
-                    <ul class="choose__list">
-                        <li><label for="small" class="choose-label">
-                            <span>S</span>200 ml
-                            <input type="radio" name="sizes" id="small" value="s" checked>
-                        </label></li>
-                        <!-- <li><button class="choose-btn" data-size="S" ><span>S</span>200 ml</button></li>
-                        <li><button class="choose-btn" data-size="M" ><span>M</span>300 ml</button></li>
-                        <li><button class="choose-btn" data-size="L" ><span>L</span>400 ml</button></li> -->
-                    </ul>
+                    <ul class="choose__list" data-size-list></ul>
                 </fieldset>
                 <fieldset class="modal-content__choose choose">
                     <legend class="choose__title">Additives</legend>
-                    <ul class="choose__list">
-                        <li><label for="one" class="choose-label">
-                            <span>1</span>Sugar
-                            <input type="checkbox" name="additives-price" id="one" value="one">
-                        </label></li>
-                        <!-- <li><button class="choose-btn" data-additives-price="0.50"><span>1</span>Sugar</button></li>
-                        <li><button class="choose-btn" data-additives-price="0.50"><span>2</span>Lemon</button></li>
-                        <li><button class="choose-btn" data-additives-price="0.50"><span>3</span>Syrup</button></li> -->
-                    </ul>
+                    <ul class="choose__list" data-additives-list></ul>
                 </fieldset>
                 <div class="modal-content__total"><p>Total:</p><p class="modal-content__total--left"></p></div>
                 <div class="modal-content__info">
@@ -169,6 +142,5 @@
     <script src="./js/slider.js"></script>
     <script src='./js/mobile-menu.js'></script>
     <script src="./js/menu.js"></script>
-    <script src='./js/modal.js'></script>
 </body>
 </html>
