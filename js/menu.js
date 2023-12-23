@@ -6,7 +6,7 @@ let products = [
     "tittle": "Irish coffee",
     "description":
       "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
-    "price": "$7.00",
+    "price": "7.00",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -42,7 +42,7 @@ let products = [
     "tittle": "Kahlua coffee",
     "description":
       "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
-    "price": "$7.00",
+    "price": "7.00",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -77,7 +77,7 @@ let products = [
     "image": '../assets/images/coffee-3.jpg',
     "tittle": "Honey raf",
     "description": "Espresso with frothed milk, cream and aromatic honey",
-    "price": "$5.50",
+    "price": "5.50",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -112,7 +112,7 @@ let products = [
     "image": '../assets/images/coffee-4.jpg',
     "tittle": "Ice cappuccino",
     "description": "Cappuccino with soft thick foam in summer version with ice",
-    "price": "$5.00",
+    "price": "5.00",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -147,7 +147,7 @@ let products = [
     "image": "../assets/images/coffee-5.jpg",
     "tittle": "Espresso",
     "description": "Classic black coffee",
-    "price": "$4.50",
+    "price": "4.50",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -183,7 +183,7 @@ let products = [
     "tittle": "Latte",
     "description":
       "Espresso coffee with the addition of steamed milk and dense milk foam",
-    "price": "$5.50",
+    "price": "5.50",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -218,7 +218,7 @@ let products = [
     "image": "../assets/images/coffee-7.jpg",
     "tittle": "Latte macchiato",
     "description": "Espresso with frothed milk and chocolate",
-    "price": "$5.50",
+    "price": "5.50",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -253,7 +253,7 @@ let products = [
     "image": "../assets/images/coffee-8.jpg",
     "tittle": "Coffee with cognac",
     "description": "Fragrant black coffee with cognac and whipped cream",
-    "price": "$6.50",
+    "price": "6.50",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -289,7 +289,7 @@ let products = [
     "tittle": "Moroccan",
     "description":
       "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
-    "price": "$4.50",
+    "price": "4.50",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -324,7 +324,7 @@ let products = [
     "image": "../assets/images/tea-2.jpg",
     "tittle": "Ginger",
     "description": "Original black tea with fresh ginger, lemon and honey",
-    "price": "$5.00",
+    "price": "5.00",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -359,7 +359,7 @@ let products = [
     "image": "../assets/images/tea-3.jpg",
     "tittle": "Cranberry",
     "description": "Invigorating black tea with cranberry and honey",
-    "price": "$5.00",
+    "price": "5.00",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -431,7 +431,7 @@ let products = [
     "tittle": "Marble cheesecake",
     "description":
       "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
-    "price": "$3.50",
+    "price": "3.50",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -466,7 +466,7 @@ let products = [
     "image": "../assets/images/dessert-2.jpg",
     "tittle": "Red velvet",
     "description": "Layer cake with cream cheese frosting",
-    "price": "$4.00",
+    "price": "4.00",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -502,7 +502,7 @@ let products = [
     "tittle": "Cheesecakes",
     "description":
       "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
-    "price": "$4.50",
+    "price": "4.50",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -538,7 +538,7 @@ let products = [
     "tittle": "Creme brulee",
     "description":
       "Delicate creamy dessert in a caramel basket with wild berries",
-    "price": "$4.00",
+    "price": "4.00",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -573,7 +573,7 @@ let products = [
     "image": "../assets/images/dessert-5.jpg",
     "tittle": "Pancakes",
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
-    "price": "$4.50",
+    "price": "4.50",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -608,7 +608,7 @@ let products = [
     "image": "../assets/images/dessert-6.jpg",
     "tittle": "Honey cake",
     "description": "Classic honey cake with delicate custard",
-    "price": "$4.50",
+    "price": "4.50",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -643,7 +643,7 @@ let products = [
     "image": "../assets/images/dessert-7.jpg",
     "tittle": "Chocolate cake",
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
-    "price": "$5.50",
+    "price": "5.50",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -679,7 +679,7 @@ let products = [
     "tittle": "Black forest",
     "description":
       "A combination of thin sponge cake with cherry jam and light chocolate mousse",
-    "price": "$6.50",
+    "price": "6.50",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -738,7 +738,7 @@ function createMarcup(cardList){
                             <p class="menu-card__title">${item.tittle}</p>
                             <p class="menu-card__text">${item.description}</p>
                         </div>
-                        <div class="menu-card__price">${item.price}</div>
+                        <div class="menu-card__price">$${item.price}</div>
                     </div>
       </button>            
     </li>
@@ -782,28 +782,60 @@ function closeModal(){
 
 }
 
-//modal with current data of product
+// modal with current data of product
+const priceProduct = document.querySelector(".modal-content__total--left");
+
 function contentForModel(cardData){
 const { image, tittle, description, price, sizes, additives } = cardData;
 const imageProduct = document.querySelector('.image-modal');
 const titleProduct = document.querySelector('.modal-content__title');
 const descriptionProduct = document.querySelector('.modal-content__supTitle');
-const priceProduct = document.querySelector(".modal-content__total--left");
 const sizeList = document.querySelector('[data-size-list]');
 const additivesList = document.querySelector('[data-additives-list]');
-
 
 imageProduct.src = image;
 imageProduct.alt = tittle;
 titleProduct.textContent = tittle;
 descriptionProduct.textContent = description;
-priceProduct.textContent = price;
 additivesList.innerHTML = createMarcupAdditives(additives);
-sizeList.innerHTML = createMarcupSizes(sizes)
+sizeList.innerHTML = createMarcupSizes(sizes);
 
-//console.log('totalPrice',totalPrice);
-  // const data = cardData
-  //   console.log(data);
+const basePrice = parseFloat(price);
+priceProduct.innerText = `$${basePrice}`;
+
+//work with form of modal
+const dataForm = document.querySelector("[data-form]");
+dataForm.addEventListener("input", handleInput);
+
+function handleInput(event) {
+  const target = event.target;
+
+  // Перевіряємо, чи це інпут розміру або інгредієнта
+  if (target.matches('input[name="size"]') || target.matches('input[name="additive"]')) {
+    const selectedSize = document.querySelector('input[name="size"]:checked');
+    const selectedAdditives = document.querySelectorAll('input[name="additive"]:checked');
+
+    // Видаляємо класи з попереднього вибору
+    document.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
+
+    // Додаємо класи відповідно до вибраних інгредієнтів та розміру
+    selectedSize && selectedSize.parentNode.classList.add('selected');
+    selectedAdditives.forEach(additive => additive.parentNode.classList.add('selected'));
+    
+    // Отримання вартості розміру
+    const sizePrice = selectedSize ? parseFloat(selectedSize.value) : 0;
+
+    // Отримання вартості інгредієнтів
+    const additivesPrice = Array.from(selectedAdditives).reduce((total, additive) => {
+      return total + (additive.checked ? parseFloat(additive.value) : 0);
+    }, 0);
+
+    const currentPrice = basePrice + sizePrice + additivesPrice;
+      priceProduct.innerText = `$${currentPrice.toFixed(2)}`; // Вивід оновленої ціни в модалці
+    
+  }
+}
+
 }
 
 function createMarcupAdditives(additives) {
@@ -811,7 +843,7 @@ function createMarcupAdditives(additives) {
     <li>
       <label for="${name}" class="choose-label">
         <span>${indx+1}</span>${name}
-        <input type="checkbox" name="size" id="${name}" value="${addPrice}">
+        <input type="checkbox" name="additive" id="${name}" value="${addPrice}">
       </label>
     </li>
   `)
@@ -820,11 +852,11 @@ function createMarcupAdditives(additives) {
 }
 function createMarcupSizes(sizes){
   const card =  Object.entries(sizes);
-  const markup = card.map((item) => `
+  const markup = card.map((item) =>`
     <li>
       <label for="${item[1].size}" class="choose-label">
         <span>${item[0].toUpperCase()}</span>${item[1].size}
-        <input type="radio" name="${item[0]}" id="${item[1].size}" value="${item[1].size}">
+        <input type="radio"  name="size" id="${item[1].size}" value="${item[1]['add-price']}">
       </label>
     </li>
   `)
@@ -832,12 +864,4 @@ function createMarcupSizes(sizes){
   return markup;
 }
 
-//work with form of modal
-const dataForm = document.querySelector("[data-form]");
-dataForm.addEventListener("submit", handleSubmit);
 
-function handleSubmit(e){
-  e.preventDefault();
-  // const form = e.target.name;
-  // console.log('form', form);
-}

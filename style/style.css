@@ -1118,16 +1118,18 @@ input[type="radio"]{
   background-color: var(--border-light-color);
   transition: background-color 0.7s ease-out, color 0.7s ease-out;
 }
-input[type="checkbox"]:checked  +  .choose-label,
-input[type="radio"]:checked +  .choose-label,
+/* input[type="checkbox"]:checked  +  .choose-label,
+input[type="radio"]:checked +  .choose-label, */
+.choose-label.selected,
 .choose-label:hover,
 .choose-label:focus{
   background-color: var(--container-color);
   border-color: var(--container-color);
   color: var(--primary-text-light-color);
 }
-input[type="checkbox"]:checked +  .choose-label  span,
-input[type="radio"]:checked +  .choose-label  span,
+/* input[type="checkbox"]:checked +  .choose-label  span,
+input[type="radio"]:checked +  .choose-label  span, */
+.choose-label.selected span,
 .choose-label:hover span,
 .choose-label:focus span{
   background-color: var(--primary-text-light-color);
