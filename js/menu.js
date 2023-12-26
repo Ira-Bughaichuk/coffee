@@ -800,6 +800,11 @@ descriptionProduct.textContent = description;
 additivesList.innerHTML = createMarcupAdditives(additives);
 sizeList.innerHTML = createMarcupSizes(sizes);
 
+// Отримуємо перший елемент розміру та встановлюємо клас "selected"
+const defaultSizeInput = document.querySelector('input[name="size"]');
+defaultSizeInput && defaultSizeInput.parentNode.classList.add('selected');
+
+
 const basePrice = parseFloat(price);
 priceProduct.innerText = `$${basePrice}`;
 
@@ -838,6 +843,7 @@ function handleInput(event) {
 
 }
 
+//  мені потрібно додати функціонал такий, щоб при відкритті модалки клас selected був на розмірі 200 мл, а вже потом можна було змінювати розір і активним ставала та кнопка на яку був клік, підскажи як це можна зробити ?
 function createMarcupAdditives(additives) {
   const markup = additives.map(({ name, 'add-price':addPrice }, indx) => `
     <li>
