@@ -800,7 +800,6 @@ descriptionProduct.textContent = description;
 additivesList.innerHTML = createMarcupAdditives(additives);
 sizeList.innerHTML = createMarcupSizes(sizes);
 
-// Отримуємо перший елемент розміру та встановлюємо клас "selected"
 const defaultSizeInput = document.querySelector('input[name="size"]');
 defaultSizeInput && defaultSizeInput.parentNode.classList.add('selected');
 
@@ -808,42 +807,35 @@ defaultSizeInput && defaultSizeInput.parentNode.classList.add('selected');
 const basePrice = parseFloat(price);
 priceProduct.innerText = `$${basePrice}`;
 
-//work with form of modal
 const dataForm = document.querySelector("[data-form]");
 dataForm.addEventListener("input", handleInput);
 
 function handleInput(event) {
   const target = event.target;
 
-  // Перевіряємо, чи це інпут розміру або інгредієнта
   if (target.matches('input[name="size"]') || target.matches('input[name="additive"]')) {
     const selectedSize = document.querySelector('input[name="size"]:checked');
     const selectedAdditives = document.querySelectorAll('input[name="additive"]:checked');
 
-    // Видаляємо класи з попереднього вибору
     document.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
 
-    // Додаємо класи відповідно до вибраних інгредієнтів та розміру
     selectedSize && selectedSize.parentNode.classList.add('selected');
     selectedAdditives.forEach(additive => additive.parentNode.classList.add('selected'));
     
-    // Отримання вартості розміру
     const sizePrice = selectedSize ? parseFloat(selectedSize.value) : 0;
 
-    // Отримання вартості інгредієнтів
     const additivesPrice = Array.from(selectedAdditives).reduce((total, additive) => {
       return total + (additive.checked ? parseFloat(additive.value) : 0);
     }, 0);
 
     const currentPrice = basePrice + sizePrice + additivesPrice;
-      priceProduct.innerText = `$${currentPrice.toFixed(2)}`; // Вивід оновленої ціни в модалці
+      priceProduct.innerText = `$${currentPrice.toFixed(2)}`; 
     
   }
 }
 
 }
 
-//  мені потрібно додати функціонал такий, щоб при відкритті модалки клас selected був на розмірі 200 мл, а вже потом можна було змінювати розір і активним ставала та кнопка на яку був клік, підскажи як це можна зробити ?
 function createMarcupAdditives(additives) {
   const markup = additives.map(({ name, 'add-price':addPrice }, indx) => `
     <li>

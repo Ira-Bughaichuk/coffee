@@ -594,6 +594,7 @@ body.lock {
   gap: 12px;
 }
 .swiper-pagination-bullet {
+  position: relative;
   display: inline-flex;
   width: 40px;
   height: 4px;
@@ -605,14 +606,28 @@ body.lock {
   transition: background-color 0.5s ease-out;
   opacity: 1;
 }
-.swiper-pagination-bullet:hover,
-.swiper-pagination-bullet:focus {
-  background-color: var(--border-dark-color);
-}
+.swiper-pagination-bullet::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 
-/* .swiper-pagination-bullet-active.swiper-pagination-bullet {
+  opacity: 1;
+  border-radius: 100px;
+  width: 0px;
+  height: 4px;
+  transition: width 1s, background-color 1s ease-out;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet::before {
   background-color: var(--border-dark-color);
- } */
+  width: 100%;
+ }
+ 
+ .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+     margin: 0;
+ } 
 
 /*========pagination-dots========*/
 
@@ -1094,7 +1109,6 @@ input[type="radio"]{
 }
 .choose-label{
   padding: 8px 16px 8px 8px;
-  /* max-width: 116px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1118,20 +1132,14 @@ input[type="radio"]{
   background-color: var(--border-light-color);
   transition: background-color 0.7s ease-out, color 0.7s ease-out;
 }
-/* input[type="checkbox"]:checked  +  .choose-label,
-input[type="radio"]:checked +  .choose-label, */
-.choose-label.selected,
-.choose-label:hover,
-.choose-label:focus{
+
+.choose-label.selected{
   background-color: var(--container-color);
   border-color: var(--container-color);
   color: var(--primary-text-light-color);
 }
-/* input[type="checkbox"]:checked +  .choose-label  span,
-input[type="radio"]:checked +  .choose-label  span, */
-.choose-label.selected span,
-.choose-label:hover span,
-.choose-label:focus span{
+
+.choose-label.selected span{
   background-color: var(--primary-text-light-color);
   color: var(--primary-text-dark-color);
 }
