@@ -440,19 +440,18 @@ body.lock {
 /* =======hero=========== */
 .hero-section {
 }
-.hero-wrapper {
-  /* max-width: 1360px; */
-
+/* .hero-wrapper {
   padding: 60px 16px;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../assets/images/hero-mob@1x.jpg");
   border-radius: 40px;
   overflow: hidden;
-}
-@media (min-device-pixel-ratio: 2) and (max-width: 767px),
+  background-image: url("../assets/images/hero-mob@1x.jpg");
+
+} */
+/* @media (min-device-pixel-ratio: 2) and (max-width: 767px),
   (min-resolution: 192dpi) and (max-width: 767px),
   (min-resolution: 2dppx) and (max-width: 767px) {
   .hero-wrapper {
@@ -489,16 +488,50 @@ body.lock {
   .hero-wrapper {
     background-image: url("../assets/images/hero-desk@2x.jpg");
   }
-}
+} */
+.hero{
+  padding: 60px 16px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 40px;
+  overflow: hidden;
 
-.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 100px 60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero {
+    padding: 100px;
+  }
+}
+.hero__video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__content {
+  background-color: lightgray 50%;
+  position: relative;
+  z-index: 2;
   width: 316px;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
 }
 @media screen and (min-width: 768px) {
-  .hero {
+  .hero__content {
     width: 530px;
   }
 }
