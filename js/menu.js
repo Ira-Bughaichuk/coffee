@@ -765,7 +765,7 @@ const modalCloseButton = document.querySelectorAll(".modal-content__btn");
 productButtons.forEach(button => {button.addEventListener("click", openModal)});
 modalCloseButton.forEach(button => { button.addEventListener("click", closeModal)});
 modal.addEventListener("click", closeModal);
-modal.querySelector('[modal-window]').addEventListener('click', function (e) {
+modal.querySelector('[data-modal-window]').addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
@@ -787,16 +787,15 @@ const priceProduct = document.querySelector(".modal-content__total--left");
 
 function contentForModel(cardData){
 const { image, tittle, description, price, sizes, additives } = cardData;
-const imageProduct = document.querySelector('.image-modal');
+const imageProduct = document.querySelector('.modal-content__image');
 const titleProduct = document.querySelector('.modal-content__title');
 const descriptionProduct = document.querySelector('.modal-content__supTitle');
 const sizeList = document.querySelector('[data-size-list]');
 const additivesList = document.querySelector('[data-additives-list]');
 
-imageProduct.src = image;
-imageProduct.alt = tittle;
 titleProduct.textContent = tittle;
 descriptionProduct.textContent = description;
+imageProduct.innerHTML = createMarcupImage(image, tittle).outerHTML;
 additivesList.innerHTML = createMarcupAdditives(additives);
 sizeList.innerHTML = createMarcupSizes(sizes);
 
@@ -834,6 +833,14 @@ function handleInput(event) {
   }
 }
 
+}
+
+function createMarcupImage(image, tittle){
+  const img = document.createElement("img");
+  img.classList.add("image-modal");
+  img.src = image;
+  img.alt = tittle;
+  return img;
 }
 
 function createMarcupAdditives(additives) {
