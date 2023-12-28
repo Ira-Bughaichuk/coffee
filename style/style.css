@@ -770,32 +770,32 @@ body.lock {
   }
 }
 .mobile__image {
-  flex: 1;
+  display: flex;
+  width: 348px;
+  height: 348px;
   align-items: center;
   justify-content: center;
 }
 
 .mobile__image img {
   width: 348px;
-  height: auto;
+  height: 348px;
   display: block;
   object-fit: cover;
   object-position: center;
 }
 @media screen and (min-width: 768px) {
+  .mobile__image,
   .mobile__image img {
     width: 630px;
+    height: 630px;
   }
 }
 
 /* =========mobile=========== */
 
 /* =======contact=========== */
-.contact-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
+.contact-section {} 
 .contact {
   padding: 60px 16px;
   background-color: var(--container-color);
