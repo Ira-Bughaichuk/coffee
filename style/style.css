@@ -968,16 +968,20 @@ body.lock {
 }
 
 .menu-card {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+display: grid;
+grid-template-columns: 1fr;
+gap: 40px;
 }
 @media screen and (min-width: 768px) {
   .menu-card {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
   }
-}
+} 
+@media screen and (min-width: 1440px) {
+  .menu-card {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} 
 .menu-card__item {
   width: 310px;
   height: 506px;
@@ -985,6 +989,8 @@ body.lock {
   border: 1px solid var(--border-light-color);
   padding-bottom: 20px;
   overflow: hidden;
+  display: grid;
+  justify-self:  center;
 }
 .menu-card__button {
   background-color: transparent;

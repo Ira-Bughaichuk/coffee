@@ -713,6 +713,7 @@ let products = [
 
 const productList = document.querySelector("[data-product-list]");
 const buttonsCategory = document.querySelectorAll("[data-button-category]");
+
 //create current button of category
 function activeButton(value){
     let current = '';
@@ -760,16 +761,17 @@ window.onload = () => {
 //work with modal
 const modal = document.querySelector("[data-modal]");
 const productButtons = document.querySelectorAll(".menu-card__button");
-const modalCloseButton = document.querySelectorAll(".modal-content__btn");
+const modalCloseButton = document.querySelector(".modal-content__btn");
 
 productButtons.forEach(button => {button.addEventListener("click", openModal)});
-modalCloseButton.forEach(button => { button.addEventListener("click", closeModal)});
+modalCloseButton.addEventListener("click", closeModal);
 modal.addEventListener("click", closeModal);
 modal.querySelector('[data-modal-window]').addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
 function openModal(button) {
+
   modal.classList.remove("is-hidden");
   document.body.classList.add("lock");
   const cardData = JSON.parse(button.getAttribute('data-card-data'));
@@ -868,5 +870,4 @@ function createMarcupSizes(sizes){
     .join("");
   return markup;
 }
-
 
