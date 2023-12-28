@@ -9,6 +9,7 @@
                 swiper = new Swiper(slider.querySelector('.swiper'), {
                     speed: 1500,
                     centeredSlides: true,
+                    grabCursor:true,
                     loop: true,
                     slidesPerView: 1,
                     spaceBetween: 20,
