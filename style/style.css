@@ -783,6 +783,7 @@ body.lock {
   display: block;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .mobile__image,
@@ -795,7 +796,7 @@ body.lock {
 /* =========mobile=========== */
 
 /* =======contact=========== */
-.contact-section {} 
+.contact-section{} 
 .contact {
   padding: 60px 16px;
   background-color: var(--container-color);
@@ -821,7 +822,7 @@ body.lock {
 .contact__left {
   width: 100%;
 
-  /* width: 316px;   */
+  /* min-width: 316px;   */
 }
 @media screen and (min-width: 768px) {
   .contact__left {
@@ -916,13 +917,14 @@ body.lock {
 /*========btns-list========*/
 .btns-list {
   display: flex;
-  column-gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+ gap: 8px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .btns-list {
-    justify-content: center;
-    column-gap: 16px;
+    gap: 16px;
   }
 }
 
@@ -971,6 +973,7 @@ body.lock {
 display: grid;
 grid-template-columns: 1fr;
 gap: 40px;
+margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .menu-card {
